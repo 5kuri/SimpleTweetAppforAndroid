@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView timeline = findViewById(R.id.timeline);
         timeline.setLayoutManager(new LinearLayoutManager(this));
         timeline.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
-        final TimelineAdapter adapter = new TimelineAdapter();
+        final TimelineAdapter adapter = new TimelineAdapter(this);
         timeline.setAdapter(adapter);
 
         new Thread(new Runnable() {
